@@ -37,3 +37,5 @@ app/_bower_components
 dist
 node_modules
 .tmp
+app/_scss/bootstrap.css
+app/_scss/main.css
