@@ -39,3 +39,4 @@ node_modules
 .tmp
 app/_scss/bootstrap.css
 app/_scss/main.css
+app/_scss/_grids.css
