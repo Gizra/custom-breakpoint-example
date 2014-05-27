@@ -1,0 +1,94 @@
+// Define Container Size variables.
+$ContainerPhone: 760px;
+$ContainerTablet: 910px;
+$ContainerDesktop: 1016px;
+$ContainerLargeDesktop: 1230px;
+
+// Media queries breakpoints.
+// Large screen / wide desktop.
+$screen-lg: 1240px;
+
+// Medium screen / desktop.
+$screen-md: 1024px;
+
+// Small screen / tablet.
+$screen-sm: 920px;
+
+// Intermediate small screen / phone. (Custom breakpoint).
+$screen-is: 768px;
+
+// Minimum screen size for the custom grid.
+$screen-is-min: ($screen-is) !default;
+// Maximum screen size for the custom grid
+$screen-is-max: ($screen-sm - 1) !default;
+
+// Extra small screen / phone.
+$screen-xs: 320px;
+
+// Maximum screen size for Extra small screen / phone.
+$screen-xs-max: ($screen-ss-min - 1) !default;
+
+// Grid guuter width.
+$grid-gutter-width: 10px;
+
+//== Container sizes.
+// Small screen / tablet.
+$container-tablet:  (($ContainerTablet + $grid-gutter-width));
+
+// Medium screen / desktop.
+$container-desktop: (($ContainerDesktop + $grid-gutter-width));
+
+// Large screen / wide desktop.
+$container-large-desktop: (($ContainerLargeDesktop + $grid-gutter-width));
+
+
+// Container width for the custom grid.
+//
+// Set the container width, and override it for fixed navbars in media queries.
+.container {
+  @media (min-width: $screen-is-min) and (max-width: $screen-is-max) {
+    width: $ContainerPhone;
+  }
+}
+
+// Xstra small grid
+@include make-grid(xs);
+
+// Function that creates the custom grid
+// Intermediate small grid
+@media (min-width: $screen-is-min) {
+  @include make-grid(is);
+}
+
+// Small grid
+//
+// Columns, offsets, pushes, and pulls for the small device range, from phones
+// to tablets.
+@media (min-width: $screen-sm-min) {
+  @include make-grid(sm);
+}
+
+// Medium grid
+//
+// Columns, offsets, pushes, and pulls for the desktop device range.
+@media (min-width: $screen-md-min) {
+  @include make-grid(md);
+}
+
+// Large grid
+//
+// Columns, offsets, pushes, and pulls for the large desktop device range.
+@media (min-width: $screen-lg-min) {
+  @include make-grid(lg);
+}
+
+
+// Add visibility class for the custom grid
+@media (min-width: $screen-is-min) and (max-width: $screen-is-max) {
+  @include responsive-visibility('.visible-is');
+}
+
+// Add hidden class for the custom grid
+@media (min-width: $screen-is-min) and (max-width: $screen-is-max) {
+  @include responsive-invisibility('.hidden-is');
+}
