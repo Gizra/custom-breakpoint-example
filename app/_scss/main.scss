@@ -1,6 +1,6 @@
 /*Including Sass-Bootstrap*/
 @import "bootstrap.scss";
-@import "_grids.scss";
+@import "grids.scss";
 /* Global Reset */
 * {
   margin: 0;
@@ -48,6 +48,22 @@ body {
         &:hover {
           color: #000;
         }
+      }
+    }
+  }
+
+  #home {
+
+    .row {
+
+      div {
+        border: 3px solid #777777;
+        min-height: 250px;
+        vertical-align: middle;
+        font-size: 16px;
+        font-weight: bold;
+        background: #eeeeee;
+        padding-top: 100px;
       }
     }
   }
