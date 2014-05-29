@@ -1,3 +1,16 @@
+// This container is a custom one, Bootstrap out of the box has 3 containers.
+$ContainerPhone: 460px;
+
+// Intermediate small screen / phone. (Custom breakpoint).
+$screen-is: 480px;
+
+// Minimum screen size for the custom grid.
+$screen-is-min: ($screen-is);
+
+// Maximum screen size for Extra small screen / phone.
+$screen-xs-max: ($screen-is-min - 1);
+
+
 /*Including Sass-Bootstrap*/
 @import "bootstrap.scss";
 @import "grids.scss";

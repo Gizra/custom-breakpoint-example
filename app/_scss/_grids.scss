@@ -1,49 +1,8 @@
-// Define Container Size variables.
-$ContainerPhone: 760px;
-$ContainerTablet: 910px;
-$ContainerDesktop: 1016px;
-$ContainerLargeDesktop: 1230px;
-
-// Media queries breakpoints.
-// Large screen / wide desktop.
-$screen-lg: 1240px;
-
-// Medium screen / desktop.
-$screen-md: 1024px;
-
-// Small screen / tablet.
-$screen-sm: 920px;
-
-// Intermediate small screen / phone. (Custom breakpoint).
-$screen-is: 768px;
-
-// Minimum screen size for the custom grid.
-$screen-is-min: ($screen-is);
-// Maximum screen size for the custom grid
+// Maximum screen size for the custom grid.
 $screen-is-max: ($screen-sm - 1);
-
-// Extra small screen / phone.
-$screen-xs: 320px;
-
-// Maximum screen size for Extra small screen / phone.
-$screen-xs-max: ($screen-is-min - 1);
 
 // Minimum screen size for Medium screen / tablet.
 $screen-sm-min: ($screen-is-max + 1);
-
-// Grid guuter width.
-$grid-gutter-width: 10px;
-
-//== Container sizes.
-// Small screen / tablet.
-$container-tablet:  (($ContainerTablet + $grid-gutter-width));
-
-// Medium screen / desktop.
-$container-desktop: (($ContainerDesktop + $grid-gutter-width));
-
-// Large screen / wide desktop.
-$container-large-desktop: (($ContainerLargeDesktop + $grid-gutter-width));
-
 
 // Container width for the custom grid.
 //
