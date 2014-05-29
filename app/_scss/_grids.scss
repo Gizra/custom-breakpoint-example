@@ -28,6 +28,9 @@ $screen-xs: 320px;
 // Maximum screen size for Extra small screen / phone.
 $screen-xs-max: ($screen-is-min - 1);
 
+// Minimum screen size for Medium screen / tablet.
+$screen-sm-min: ($screen-is-max + 1);
+
 // Grid guuter width.
 $grid-gutter-width: 10px;
 
