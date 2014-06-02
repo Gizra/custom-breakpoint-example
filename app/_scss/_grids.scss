@@ -44,7 +44,6 @@ $screen-sm-min: ($screen-is-max + 1);
   @include make-grid(lg);
 }
 
-
 // Add visibility class for the custom grid
 @media (min-width: $screen-is-min) and (max-width: $screen-is-max) {
   @include responsive-visibility('.visible-is');
