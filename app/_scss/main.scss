@@ -10,13 +10,13 @@ $screen-is-min: ($screen-is);
 // Maximum screen size for the custom grid.
 $screen-is-max: 767px;
 
-// Maximum screen size for Extra small screen / phone.
+// Maximum screen size for Extra small screen / phone (We have to call it before bootstrap).
 $screen-xs-max: ($screen-is-min - 1);
-
 
 /*Including Sass-Bootstrap*/
 @import "bootstrap.scss";
 @import "grids.scss";
+
 /* Global Reset */
 * {
   margin: 0;
