@@ -7,6 +7,9 @@ $screen-is: 480px;
 // Minimum screen size for the custom grid.
 $screen-is-min: ($screen-is);
 
+// Maximum screen size for the custom grid.
+$screen-is-max: 767px;
+
 // Maximum screen size for Extra small screen / phone.
 $screen-xs-max: ($screen-is-min - 1);
 
