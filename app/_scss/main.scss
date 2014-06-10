@@ -26,7 +26,7 @@ $screen-xs-max: ($screen-is-min - 1);
 html, body { height: 100%; }
 
 body {
-  background-color: #FFF;
+  background-color: white;
   font: 13.34px Helvetica, Arial, sans-serif;
   font-size: small;
   text-align: center;
@@ -59,7 +59,7 @@ body {
       margin-bottom: 2em;
 
       a {
-        color: #a00;
+        color: #4C376C;
 
         &:hover {
           color: #000;
@@ -73,30 +73,33 @@ body {
     .row {
 
       div {
-        border: 3px solid #777777;
+        border: 2px solid white;
         min-height: 250px;
         vertical-align: middle;
         font-size: 16px;
         font-weight: bold;
-        background: #eeeeee;
-        padding-top: 100px;
+        background: #E27058;
+        padding-top: 110px;
+        color: white;
+        border-radius: 6px;
       }
     }
   }
 
   .footer {
     font-size: 80%;
-    color: #666;
-    border-top: 4px solid #eee;
-    margin-top: 2em;
+    color: #4C376C;
+    border-top: 2px solid #E5E5E5;
+    margin-top: 3em;
     overflow: hidden;
 
     .contact {
       float: left;
       margin-right: 3em;
+      text-align: left;
 
       a {
-        color: #8085C1;
+        color: #4C376C;
       }
     }
   }
