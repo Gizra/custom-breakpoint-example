@@ -2,5 +2,7 @@
   "name": "custom-grid",
   "version": "0.0.0",
   "dependencies": {
+    "jquery": "~1.10.2",
+    "bootstrap-sass-official": "~3.1.1"
   }
 }
