@@ -7,6 +7,7 @@ Installation:
 
 ```bash
 bundle install
+bower install
 npm install
 ```
 
