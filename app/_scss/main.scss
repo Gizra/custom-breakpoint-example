@@ -26,8 +26,8 @@ $screen-xs-max: ($screen-is-min - 1);
 html, body { height: 100%; }
 
 body {
-  background-color: white;
-  font: 13.34px Helvetica, Arial, sans-serif;
+  background-color: #000000;
+  font: 14px Helvetica, Arial, sans-serif;
   font-size: small;
   text-align: center;
 
@@ -36,11 +36,11 @@ body {
   }
 
   h1 {
-    margin-bottom: 1em;
+    margin-bottom: 10px;
   }
 
   p {
-    margin: 1em 0;
+    margin: 10px 0;
   }
 
   a         { color: #00a; }
@@ -56,10 +56,12 @@ body {
 
     .title {
       display: inline-block;
-      margin-bottom: 2em;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      font-size: 30px;
 
       a {
-        color: #9c5f1b;
+        color: white;
 
         &:hover {
           color: #000;
@@ -73,7 +75,7 @@ body {
     .row {
 
       div {
-        border: 2px solid white;
+        border: 2px solid black;
         min-height: 250px;
         vertical-align: middle;
         font-size: 16px;
@@ -88,18 +90,18 @@ body {
 
   .footer {
     font-size: 80%;
-    color: #4C376C;
-    border-top: 2px solid #E5E5E5;
-    margin-top: 3em;
+    color: white;
+    border-top: 2px dashed white;
+    margin-top: 30px;
     overflow: hidden;
 
     .contact {
       float: left;
-      margin-right: 3em;
+      margin-right: 30px;
       text-align: left;
 
       a {
-        color: #4C376C;
+        color: white;
       }
     }
   }
