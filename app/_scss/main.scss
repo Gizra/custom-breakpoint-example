@@ -14,7 +14,7 @@ $screen-is-max: 767px;
 $screen-xs-max: ($screen-is-min - 1);
 
 /*Including Sass-Bootstrap*/
-@import '../_bower_components/bootstrap-sass-official/vendor/assets/stylesheets/bootstrap.scss';
+@import 'bootstrap-sass-official/vendor/assets/stylesheets/bootstrap.scss';
 @import "_grids.scss";
 
 /* Global Reset */
