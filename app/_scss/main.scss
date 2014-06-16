@@ -26,10 +26,14 @@ $screen-xs-max: ($screen-is-min - 1);
 html, body { height: 100%; }
 
 body {
-  background-color: #000000;
+  background: url("../images/background.f936.jpg") 0 0 repeat transparent;
   font: 14px Helvetica, Arial, sans-serif;
   font-size: small;
   text-align: center;
+
+  @media (min-width: $screen-is-min) and (max-width: $screen-is-max ) {
+    background: white;
+  }
 
   h1, h2, h3, h4, h5, h6 {
     font-size: 100%;
@@ -43,14 +47,13 @@ body {
     margin: 10px 0;
   }
 
-  a         { color: #00a; }
-  a:hover   { color: #000; }
-  a:visited { color: #a0a; }
+  a         { color: white; }
+  a:hover   { color: white; }
+  a:visited { color: white; }
 
   .header {
 
     a {
-      font-weight: bold;
       text-decoration: none;
     }
 
@@ -58,13 +61,18 @@ body {
       display: inline-block;
       margin-bottom: 20px;
       text-transform: uppercase;
-      font-size: 30px;
+      font-size: 35px;
+      font-weight: normal;
 
       a {
         color: white;
 
+        @media (min-width: $screen-is-min) and (max-width: $screen-is-max ) {
+          color: black;
+        }
+
         &:hover {
-          color: #000;
+          color: #F8BB88;
         }
       }
     }
@@ -73,6 +81,10 @@ body {
   #home {
 
     .row {
+
+      @media (max-width: $screen-xs) {
+        padding: 0 15px;
+      }
 
       div {
         border: 2px solid black;
@@ -84,6 +96,10 @@ body {
         padding-top: 110px;
         color: white;
         border-radius: 6px;
+
+        @media (min-width: $screen-is-min) and (max-width: $screen-is-max ) {
+          border-color: white;
+        }
       }
     }
   }
@@ -95,6 +111,11 @@ body {
     margin-top: 30px;
     overflow: hidden;
 
+    @media (min-width: $screen-is-min) and (max-width: $screen-is-max ) {
+      border-color: black;
+      color: black;
+    }
+
     .contact {
       float: left;
       margin-right: 30px;
@@ -102,6 +123,10 @@ body {
 
       a {
         color: white;
+
+        @media (min-width: $screen-is-min) and (max-width: $screen-is-max ) {
+          color: black;
+        }
       }
     }
   }
