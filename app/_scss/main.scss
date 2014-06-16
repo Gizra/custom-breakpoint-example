@@ -86,7 +86,7 @@ body {
         padding: 0 15px;
       }
 
-      div {
+      .grids {
         border: 2px solid black;
         min-height: 250px;
         vertical-align: middle;
@@ -100,6 +100,12 @@ body {
         @media (min-width: $screen-is-min) and (max-width: $screen-is-max ) {
           border-color: white;
         }
+      }
+
+      .custom-note {
+        text-align: center;
+        margin-top: 20px;
+        font-size: 18px;
       }
     }
   }

@@ -50,3 +50,12 @@ $screen-sm-min: ($screen-is-max + 1);
 @media (min-width: $screen-is-min) and (max-width: $screen-is-max) {
   @include responsive-invisibility('.hidden-is');
 }
+
+// Define this class as hidden in all other grid widths.
+@media (min-width: $screen-is-max) {
+  @include responsive-invisibility('.visible-is');
+}
+
+@media (max-width: $screen-xs-max) {
+  @include responsive-invisibility('.visible-is');
+}
