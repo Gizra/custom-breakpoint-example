@@ -15,6 +15,7 @@ $screen-xs-max: ($screen-is-min - 1);
 
 /*Including Sass-Bootstrap*/
 @import 'bootstrap-sass-official/vendor/assets/stylesheets/bootstrap.scss';
+@import "compass/css3/border-radius";
 @import "_grids.scss";
 
 /* Global Reset */
@@ -60,9 +61,15 @@ body {
     .title {
       display: inline-block;
       margin-bottom: 20px;
-      text-transform: uppercase;
+      text-transform: capitalize;
       font-size: 35px;
       font-weight: normal;
+      border: 1px solid white;
+      padding: 10px 20px;
+      @include border-radius(5px);
+      @media (min-width: $screen-is-min) and (max-width: $screen-is-max ) {
+        border-color: black;
+      }
 
       a {
         color: white;

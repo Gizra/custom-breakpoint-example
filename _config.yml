@@ -3,7 +3,7 @@
 # 2. config.build.yml
 # 3. config.yml
 
-name: custom-grid
+name: bootstrap
 description: Custom grid in Sass-Bootstrap
 author:
   name: Nader Safadi
