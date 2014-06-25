@@ -289,7 +289,7 @@ module.exports = function (grunt) {
     buildcontrol: {
       dist: {
         options: {
-          remote: 'git@github.com:Gizra/custom-grid.git',
+          remote: 'git@github.com:Gizra/custom-breakpoint-example.git',
           branch: 'gh-pages',
           commit: true,
           push: true
