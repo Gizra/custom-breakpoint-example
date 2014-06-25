@@ -20,7 +20,7 @@ $screen-xs-max: ($screen-is-min - 1);
 // Including border radius.
 @import "compass/css3/border-radius";
 
-/* Global Reset */
+// General elements
 * {
   margin: 0;
   padding: 0;
@@ -37,112 +37,114 @@ body {
   @media (min-width: $screen-is-min) and (max-width: $screen-is-max ) {
     background: white;
   }
+}
 
-  h1, h2, h3, h4, h5, h6 {
-    font-size: 100%;
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+}
+
+h1 {
+  margin-bottom: 10px;
+}
+
+p {
+  margin: 10px 0;
+}
+
+a         { color: white; }
+a:hover   { color: white; }
+a:visited { color: white; }
+
+.header {
+
+  a {
+    text-decoration: none;
   }
 
-  h1 {
-    margin-bottom: 10px;
-  }
-
-  p {
-    margin: 10px 0;
-  }
-
-  a         { color: white; }
-  a:hover   { color: white; }
-  a:visited { color: white; }
-
-  .header {
-
-    a {
-      text-decoration: none;
-    }
-
-    .title {
-      display: inline-block;
-      margin-bottom: 20px;
-      text-transform: capitalize;
-      font-size: 35px;
-      font-weight: normal;
-      border: 1px solid white;
-      padding: 10px 20px;
-      @include border-radius(5px);
-      @media (min-width: $screen-is-min) and (max-width: $screen-is-max ) {
-        border-color: black;
-      }
-
-      a {
-        color: white;
-
-        @media (min-width: $screen-is-min) and (max-width: $screen-is-max ) {
-          color: black;
-        }
-
-        &:hover {
-          color: #F8BB88;
-        }
-      }
-    }
-  }
-
-  #home {
-
-    .row {
-
-      @media (max-width: $screen-xs) {
-        padding: 0 15px;
-      }
-
-      .custom-note {
-        text-align: center;
-        margin-bottom: 20px;
-        font-size: 18px;
-        text-transform: uppercase;
-      }
-
-      .grids {
-        border: 2px solid black;
-        min-height: 250px;
-        vertical-align: middle;
-        font-size: 16px;
-        font-weight: bold;
-        background: #E27058;
-        padding-top: 110px;
-        color: white;
-        border-radius: 6px;
-
-        @media (min-width: $screen-is-min) and (max-width: $screen-is-max ) {
-          border-color: white;
-        }
-      }
-    }
-  }
-
-  .footer {
-    font-size: 80%;
-    color: white;
-    border-top: 2px dashed white;
-    margin-top: 30px;
-    overflow: hidden;
-
+  .title {
+    display: inline-block;
+    margin-bottom: 20px;
+    text-transform: capitalize;
+    font-size: 35px;
+    font-weight: normal;
+    border: 1px solid white;
+    padding: 10px 20px;
+    @include border-radius(5px);
     @media (min-width: $screen-is-min) and (max-width: $screen-is-max ) {
       border-color: black;
-      color: black;
     }
 
-    .contact {
-      float: left;
-      margin-right: 30px;
-      text-align: left;
+    a {
+      color: white;
 
-      a {
-        color: white;
+      @media (min-width: $screen-is-min) and (max-width: $screen-is-max ) {
+        color: black;
+      }
 
-        @media (min-width: $screen-is-min) and (max-width: $screen-is-max ) {
-          color: black;
-        }
+      &:hover {
+        color: #F8BB88;
+      }
+    }
+  }
+}
+
+.footer {
+  font-size: 80%;
+  color: white;
+  border-top: 2px dashed white;
+  margin-top: 30px;
+  overflow: hidden;
+
+  @media (min-width: $screen-is-min) and (max-width: $screen-is-max ) {
+    border-color: black;
+    color: black;
+  }
+
+  .contact {
+    float: left;
+    margin-right: 30px;
+    text-align: left;
+
+    a {
+      color: white;
+
+      @media (min-width: $screen-is-min) and (max-width: $screen-is-max ) {
+        color: black;
+      }
+    }
+  }
+}
+
+
+// Homepage
+#home {
+
+  .row {
+
+    @media (max-width: $screen-xs) {
+      padding: 0 15px;
+    }
+
+    .custom-note {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 18px;
+      text-transform: uppercase;
+    }
+
+    .grids {
+      border: 2px solid black;
+      min-height: 250px;
+      vertical-align: middle;
+      font-size: 16px;
+      font-weight: bold;
+      background: #E27058;
+      padding-top: 110px;
+      color: white;
+      border-radius: 6px;
+
+      @media (min-width: $screen-is-min) and (max-width: $screen-is-max ) {
+        border-color: white;
       }
     }
   }
