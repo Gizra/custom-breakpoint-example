@@ -10,35 +10,10 @@ $screen-sm-min: ($screen-is-max + 1);
   }
 }
 
-// Xstra small grid
-@include make-grid(xs);
-
 // Function that creates the custom grid
 // Intermediate small grid
-@media (min-width: $screen-is-min) {
+@media (min-width: $screen-is-min) and (max-width: $screen-is-max) {
   @include make-grid(is);
-}
-
-// Small grid
-//
-// Columns, offsets, pushes, and pulls for the small device range, from phones
-// to tablets.
-@media (min-width: $screen-sm-min) {
-  @include make-grid(sm);
-}
-
-// Medium grid
-//
-// Columns, offsets, pushes, and pulls for the desktop device range.
-@media (min-width: $screen-md-min) {
-  @include make-grid(md);
-}
-
-// Large grid
-//
-// Columns, offsets, pushes, and pulls for the large desktop device range.
-@media (min-width: $screen-lg-min) {
-  @include make-grid(lg);
 }
 
 // Add visibility class for the custom grid
@@ -56,6 +31,6 @@ $screen-sm-min: ($screen-is-max + 1);
   @include responsive-invisibility('.visible-is');
 }
 
-@media (max-width: $screen-xs-max) {
+@media (max-width: $screen-is-min) {
   @include responsive-invisibility('.visible-is');
 }
