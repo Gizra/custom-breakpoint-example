@@ -286,6 +286,16 @@ module.exports = function (grunt) {
         }]
       }
     },
+    buildcontrol: {
+      dist: {
+        options: {
+          remote: 'git@github.com:Gizra/custom-grid.git',
+          branch: 'gh-pages',
+          commit: true,
+          push: true
+        }
+      }
+    },
     jshint: {
       options: {
         jshintrc: '.jshintrc',
@@ -351,9 +361,7 @@ module.exports = function (grunt) {
   grunt.registerTask('check', [
     'clean:server',
     'jekyll:check',
-    'compass:server',
-    'jshint:all',
-    'csslint:check'
+    'compass:server'
   ]);
 
   grunt.registerTask('build', [
@@ -371,6 +379,13 @@ module.exports = function (grunt) {
     'filerev',
     'usemin',
     'htmlmin'
+    ]);
+
+  grunt.registerTask('deploy', [
+    'check',
+    'test',
+    'build',
+    'buildcontrol'
     ]);
 
   grunt.registerTask('default', [
