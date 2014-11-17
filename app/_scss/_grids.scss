@@ -16,21 +16,21 @@ $screen-sm-min: ($screen-is-max + 1);
   @include make-grid(is);
 }
 
-// Add visibility class for the custom grid
+// Add visibility class "visible-is" for the custom grid
 @media (min-width: $screen-is-min) and (max-width: $screen-is-max) {
   @include responsive-visibility('.visible-is');
 }
 
-// Add hidden class for the custom grid
+// Add hidden "hidden-is" class for the custom grid
 @media (min-width: $screen-is-min) and (max-width: $screen-is-max) {
   @include responsive-invisibility('.hidden-is');
 }
 
-// Define this class as hidden in all other grid widths.
-@media (min-width: $screen-is-max) {
+// Define the "visible-is" class as hidden in all other grid widths.
+@media (min-width: $screen-sm-min) {
   @include responsive-invisibility('.visible-is');
 }
 
-@media (max-width: $screen-is-min) {
+@media (max-width: $screen-xs-max) {
   @include responsive-invisibility('.visible-is');
 }
