@@ -1,6 +1,26 @@
 // Minimum screen size for Medium screen / tablet.
 $screen-sm-min: ($screen-is-max + 1);
 
+@mixin make-grid-columns($i: 1, $list: ".col-xs-#{$i}, .col-is-#{$i}, .col-sm-#{$i}, .col-md-#{$i}, .col-lg-#{$i}") {
+  @for $i from (1 + 1) through $grid-columns {
+    $list: "#{$list}, .col-xs-#{$i}, .col-is-#{$i}, .col-sm-#{$i}, .col-md-#{$i}, .col-lg-#{$i}";
+  }
+  #{$list} {
+    position: relative;
+    // Prevent columns from collapsing when empty
+    min-height: 1px;
+    // Inner gutter via padding
+    padding-left:  ($grid-gutter-width / 2);
+    padding-right: ($grid-gutter-width / 2);
+    @media (min-width: $screen-lg-min) {
+      padding-left:  30px;
+      padding-right: 30px;
+    }
+  }
+}
+
+@include make-grid-columns;
+
 // Container width for the custom grid.
 //
 // Set the container width, and override it for fixed navbars in media queries.
